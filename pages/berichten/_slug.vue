@@ -3,7 +3,7 @@
     <page-header
       :image="article.image"
       :title="article.title"
-      :imageOpacity="0.6"
+      :imageOpacity="'0.6'"
     >
       <div>{{ currentDate }} - Bart Haasbroek</div>
       <template #headerBottom>
@@ -11,8 +11,8 @@
       </template>
     </page-header>
     <div class="content-wrapper content-wrapper--narrow page-content py-3">
+      <!-- <h2>{{ article.title }}</h2> -->
       <toc :toc="article.toc"></toc>
-      <h2>{{ article.title }}</h2>
       <!-- <div>
         tags:
         <span v-for="(tag, index) in article.tags">
@@ -36,7 +36,7 @@ export default Vue.extend({
   },
   async asyncData({ $content, params }) {
     const article = await $content("blogs", params.slug).fetch();
-    console.log("article", article);
+    // console.log("article", article);
 
     return {
       article,

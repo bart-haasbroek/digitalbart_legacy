@@ -12,7 +12,7 @@
             </div>
           </div>
           <div class="col-6 h-100 pt-2 pb-5">
-            <img class="mx-auto" src="images/test-img1.svg" alt="" />
+            <img class="mx-auto" src="images/home-image.png" alt="" />
           </div>
         </div>
       </div>
