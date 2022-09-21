@@ -5,6 +5,11 @@ image: "./images/creative.jpg"
 categories:
   - { title: "Procreate", slug: "procreate" }
   - { title: "Tekenen", slug: "tekenen" }
+seoContent:
+  {
+    title: "Maak een herhalend patroon in pro create",
+    description: "Leer hier hoe je een herhalend patroon kunt maken",
+  }
 ---
 
 Empower your NuxtJS application with `@nuxtjs/content` module: write in a `content/` directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a **Git-based Headless CMS**.

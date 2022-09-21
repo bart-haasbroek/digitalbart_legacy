@@ -37,6 +37,10 @@ export default {
 
   &--blue {
     background: aliceblue;
+
+    .stroke__title {
+      margin-top: 0;
+    }
   }
 }
 // .stroke--blue + .stroke {

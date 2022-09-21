@@ -4,6 +4,11 @@ description: "Voeg een herkenbare witte stickerrand toe aan je illustratie en st
 image: ./images/creative.jpg
 categories:
   - { title: "Procreate", slug: "procreate" }
+seoContent:
+  {
+    title: "Stickers maken in procreate",
+    description: "Leer hier hoe je een stickers maakt van je illustratie",
+  }
 ---
 
 Stickers zijn van alle tijden en geven vaak een unieke stijl aan een illustratie. Ze zijn leuk om te verzamelen en op te plakken, maar het is natuurlijk nog leuker ze om zelf te maken en ze (digitaal) te versturen aan je vrienden.

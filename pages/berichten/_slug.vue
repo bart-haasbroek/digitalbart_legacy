@@ -32,11 +32,12 @@ import Vue from "vue";
 import { buildSeoHead } from "../../helpers/build-seo-head";
 export default Vue.extend({
   head() {
-    return buildSeoHead(this.article);
+    const seoContent = this.article["seoContent"] || null;
+    return buildSeoHead(seoContent);
   },
   async asyncData({ $content, params }) {
     const article = await $content("blogs", params.slug).fetch();
-    // console.log("article", article);
+    console.log("article", article);
 
     return {
       article,

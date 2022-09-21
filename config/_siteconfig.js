@@ -1,5 +1,5 @@
 export default {
-    siteName: 'Headless blog',
+    siteName: 'Digitalbart',
     logo: '/images/placeholder-logo.png',
     hostname: 'https://www.testsite.nl',
     googleAnalytics: {
@@ -16,6 +16,10 @@ export default {
         url: "/over-mij",
         title: "Over mij",
         icon: "house-door",
+      },
+      {
+        url: "/portfolio",
+        title: "Portfolio",
       },
       {
         url: "/berichten",

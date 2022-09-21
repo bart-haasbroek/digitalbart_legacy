@@ -4,6 +4,7 @@
       <div
         class="app-grid"
         :class="['columns-amount-' + columns, 'partion-' + partion]"
+        :style="{ gridGap: gridGap }"
       >
         <slot></slot>
       </div>
@@ -20,6 +21,9 @@ export default {
     partion: {
       default: 1,
     },
+    gridGap: {
+      default: "36px",
+    },
   },
 };
 </script>
@@ -28,7 +32,6 @@ export default {
 .app-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 36px;
 
   &.columns-amount-2 {
     grid-template-columns: repeat(2, 1fr);

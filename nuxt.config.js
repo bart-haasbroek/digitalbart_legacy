@@ -14,6 +14,7 @@ export default {
   plugins: [
     { src: '~/plugins/globals.js' },
     { src: '~/plugins/aos.js', ssr: false, mode: 'client' },
+    { src: '~/plugins/lightgallery.client.js', ssr: false, mode: 'client' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

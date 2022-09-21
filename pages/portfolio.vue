@@ -1,10 +1,10 @@
 <template>
   <div class="page-wrapper">
-    <page-header :title="'Over mij'"> </page-header>
+    <page-header :title="'Portfolio'"> </page-header>
 
     <div class="content-wrapper content-wrapper--narrow page-content text-big">
       <breadcrumbs></breadcrumbs>
-      <nuxt-content :document="page" />
+      <portfolio-items :portfolio-items="portfolio"></portfolio-items>
     </div>
   </div>
 </template>
@@ -12,20 +12,17 @@
 <script>
 import { buildSeoHead } from "../helpers/build-seo-head";
 export default {
-  name: "aboutPage",
+  name: "PortfolioPage",
   head() {
     return buildSeoHead({
-      title: "Digitalbart Over mij pagina",
-      description: "Over mij pagina",
+      title: "Portfolio pagina",
+      description: "Mijn werk van digitalbart",
     });
   },
   async asyncData({ $content }) {
-    const page = await $content("pages", "over-mij")
-      .sortBy("createdAt", "desc")
-      .fetch();
-
+    const portfolio = await $content("portfolio").fetch();
     return {
-      page,
+      portfolio,
     };
   },
 };

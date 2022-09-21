@@ -17,7 +17,15 @@
         </div>
       </div>
     </div>
-    <stroke title="Creatief blog" data-aos="fade-in">
+    <stroke title="Laatste werk" data-aos="fade-in">
+      <portfolio-items :portfolio-items="portfolio"></portfolio-items>
+      <div class="text-center mt-4">
+        <app-button @click="$router.push('/portfolio')">
+          Bekijk al mijn werk
+        </app-button>
+      </div>
+    </stroke>
+    <stroke title="Creatief blog" data-aos="fade-in" :is-blue="true">
       <app-grid :columns="3">
         <blog-item
           v-for="(post, index) in blogs"
@@ -32,9 +40,9 @@
         ></blog-item>
       </app-grid>
       <div class="text-center mt-4">
-        <app-button @click="$router.push('/berichten')"
-          >Naar de creatieve blog</app-button
-        >
+        <app-button @click="$router.push('/berichten')">
+          Naar de creatieve blog
+        </app-button>
       </div>
     </stroke>
     <!-- <div class="content-wrapper">
@@ -53,13 +61,18 @@
 import { buildSeoHead } from "../helpers/build-seo-head";
 export default {
   head() {
-    return buildSeoHead();
+    return buildSeoHead({
+      title: "Digitalbart homepagina",
+      description: "Digitalbart portfolio website",
+    });
   },
   name: "IndexPage",
   async asyncData({ $content }) {
     const blogs = await $content("blogs").sortBy("createdAt", "desc").fetch();
+    const portfolio = await $content("portfolio").limit(3).fetch();
     return {
       blogs,
+      portfolio,
     };
   },
 };
@@ -75,6 +88,7 @@ export default {
   h1 {
     font-size: 62px;
     font-weight: 600;
+    line-height: 76px;
   }
 }
 </style>
