@@ -3,7 +3,9 @@
     <div class="homepage-header">
       <div class="content-wrapper h-100">
         <div class="row h-100">
-          <div class="col-6 d-flex align-items-center">
+          <div
+            class="col-12 col-md-6 d-flex align-items-center homepage-header__text"
+          >
             <div>
               <h1>Leer mooie creaties maken met pro create</h1>
               <!-- <app-button class="mt-3 button" color="white">
@@ -11,7 +13,9 @@
               </app-button> -->
             </div>
           </div>
-          <div class="col-6 h-100 pt-2 pb-5">
+          <div
+            class="col-12 col-md-6 h-md-100 pt-2 d-flex align-items-center homepage-header__image"
+          >
             <img class="mx-auto" src="images/home-image.png" alt="" />
           </div>
         </div>
@@ -80,7 +84,7 @@ export default {
 
 <style lang="scss">
 .homepage-header {
-  height: 550px;
+  height: 500px;
   max-height: 80vh;
   background: #f0f8ff;
   border-radius: 0 0 40px 40px;
@@ -88,7 +92,31 @@ export default {
   h1 {
     font-size: 62px;
     font-weight: 600;
-    line-height: 76px;
+    line-height: 78px;
+
+    @media only screen and (max-width: 1024px) {
+      font-size: 55px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      font-size: 26px;
+      line-height: 48px;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    height: auto;
+    max-height: none;
+
+    .homepage-header__text {
+      order: 2;
+      margin-bottom: 30px;
+    }
+    .homepage-header__image {
+      height: 240px;
+      padding: 0px 0;
+      margin: 10px 0;
+    }
   }
 }
 </style>

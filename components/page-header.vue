@@ -111,17 +111,8 @@ export default {
   }
 
   &__top {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-
-  &__logo {
-    width: 160px;
-    cursor: pointer;
-
-    img {
-      max-height: 100%;
-    }
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 
   h1,
@@ -149,9 +140,18 @@ export default {
     z-index: 10;
     padding-bottom: 30px;
 
+    @media only screen and (max-width: 767px) {
+      padding-top: 30px;
+    }
+
     h1 {
       color: var(--color-dark);
       font-size: 46px;
+      line-height: 1.3;
+
+      @media only screen and (max-width: 767px) {
+        font-size: 30px;
+      }
     }
   }
 

@@ -1,6 +1,6 @@
 export default {
     siteName: 'Digitalbart',
-    logo: '/images/placeholder-logo.png',
+    logo: '/images/digitalbart-logo.svg',
     hostname: 'https://www.testsite.nl',
     googleAnalytics: {
         on: false,

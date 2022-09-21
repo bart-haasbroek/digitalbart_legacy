@@ -119,7 +119,7 @@ export default {
   }
 }
 .logo {
-  width: 160px;
+  width: 250px;
   img {
     max-height: 100%;
   }
@@ -131,13 +131,13 @@ export default {
   display: grid;
 
   @media only screen and (max-width: 767px) {
-    padding-top: 64px;
+    padding-top: 60px;
   }
 }
 
 .top-bar {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 34px;
+  padding-bottom: 24px;
 }
 
 .footer__list a {

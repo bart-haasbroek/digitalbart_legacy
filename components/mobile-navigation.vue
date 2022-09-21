@@ -38,7 +38,7 @@ export default {
 
 <style lang="scss" scoped>
 .logo {
-  width: 110px;
+  width: 160px;
 }
 .mobile-bar {
   top: 0;
@@ -47,16 +47,17 @@ export default {
   background: aliceblue;
 
   &__inner {
-    padding: 7px 20px;
+    padding: 16px 20px;
     box-shadow: 0px 1px 3px rgb(0 0 0 / 30%);
     position: relative;
+    background: aliceblue;
   }
 }
 
 .mobile-navigation {
   max-height: 70vh;
   overflow-y: scroll;
-  box-shadow: 0px 1px 3px;
+  box-shadow: 0px 1px 7px 0px rgb(0 0 0 / 80%);
   ul {
     li {
       + li {
